@@ -7,22 +7,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
   <title>Angel Qui</title>
 </head>
 <body>
   <header class="header">
     <nav class="navbar">
-      <a href="#" class="nav-branding">Angel Qui</a>
+      <div class="brand">
+        <img src="./img/logo.png" alt="Logo todo feo lmao">
+        <a href="#" class="nav-branding">Angel Qui</a>
+      </div>
 
       <ul class="nav-menu">
         <li class="nav-item">
           <a href="#main" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">About me</a>
+          <a href="#projects" class="nav-link">Projects</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Contact</a>
+          <a href="#aboutme" class="nav-link">About me</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" href="https://drive.google.com/file/d/1t3JBh-bRV9vrTwpOlhHdqymglAbydp_c/view?usp=sharing" class="nav-link">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a href="mailto:angelquimorita@gmail.com" class="nav-link">Mail me</a>
         </li>
       </ul>
 
@@ -34,89 +44,121 @@
 
     </nav>
   </header>
-
   <!-- MAIN -->
   <main id="main">
     <div class="main-text">
-      <h1 class="main-text__head">Hi, I'm Angel Qui 👋</h1>
+      <h1 class="main-text__head">Hey, I'm Angel Qui 👋</h1>
       <p class="main-text__body">
-        I'm a Backend Developer, always interested in learning new technologies
+        I'm a <u>Backend Developer</u>, always interested in learning new technologies
       </p>
+      <div class="contact">
+        <a href="https://github.com/migurd" class="tech github"></a>
+        <a href="https://www.linkedin.com/in/angel-q-a82044203/" class="tech linkedin"></a>
+      </div>
     </div>
     <!-- <picture class="profile-picture">
       <img src="./img/pfp.jpg" alt="Profile picture">
     </picture> -->
   </main>
 
+  <!-- <svg class="first-wave" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,600 C 0,600 0,300 0,300 C 190.2666666666667,352 380.5333333333334,404 521,374 C 661.4666666666666,344 752.1333333333332,231.99999999999997 897,206 C 1041.8666666666668,180.00000000000003 1240.9333333333334,240 1440,300 C 1440,300 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="#ffffff" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg> -->
+
   <!-- PROJECTS -->
-  <section class="projects">
+  <section id="projects">
     <h2>My Projects</h2>
     
-    <article class="projects__article">
-      <picture class="projects__picture">
-        <img src="./img/fill_img.gif" alt="Project Img">
-      </picture>
-      <div class="project__text">
-        <h3>Project #1</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem consequuntur impedit veritatis facere laudantium voluptas sint illum nihil. Minima nostrum dolores vitae a est iusto facere aliquid veritatis doloremque!
-      </p>
-      </div>
-      <div class="projects_article--tech">
-        <span class="tech c"></span>
-      </div>
-      <div class="projects__article--btn">
-        <button>Repository</button>
-        <button>Live Demo</button>
-      </div>
-    </article>
-    <article class="projects__article">
-      <picture class="projects__picture">
-        <img src="./img/fill_img.gif" alt="Project Img">
-      </picture>
-      <div class="project__text">
-        <h3>Project #2</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem consequuntur impedit veritatis facere laudantium voluptas sint illum nihil. Minima nostrum dolores vitae a est iusto facere aliquid veritatis doloremque!
-      </p>
-      </div>
-    </article>
-    <article class="projects__article">
-      <picture class="projects__picture">
-        <img src="./img/fill_img.gif" alt="Project Img">
-      </picture>
-      <div class="project__text">
-        <h3>Project #3</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem consequuntur impedit veritatis facere laudantium voluptas sint illum nihil. Minima nostrum dolores vitae a est iusto facere aliquid veritatis doloremque!
-      </p>
-      </div>
-    </article>
-    <article class="projects__article">
-      <picture class="projects__picture">
-        <img src="./img/fill_img.gif" alt="Project Img">
-      </picture>
-      <div class="project__text">
-        <h3>Project #4</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem consequuntur impedit veritatis facere laudantium voluptas sint illum nihil. Minima nostrum dolores vitae a est iusto facere aliquid veritatis doloremque!
-      </p>
-      </div>
-    </article>
+    <div class="projects__articles-container">
+      <article class="projects__article gym">
+        <picture class="projects__picture">
+          <img style="background-color: black;object-fit: contain;" src="./img/gym.gif" alt="Project Img">
+        </picture>
+        <div class="project__text">
+          <h3>Inventory Control for a Gym</h3>
+        <p>
+          I designed, developed, and led a project aimed at creating an inventory control system for a gym.
+        </p>
+        </div>
+        <div class="projects__article--tech">
+          <span class="tech c"></span>
+          <span class="tech cc"></span>
+        </div>
+        <div class="projects__article--btn">
+          <button href="https://github.com/migurd/GIMNASIO_CONTROL_DE_INVENTARIO">Repository</button>
+          <!-- <button>Live Demo</button> -->
+        </div>
+      </article>
+      <!-- ARTICLE 2 -->
+      <article class="projects__article">
+        <picture class="projects__picture">
+          <img src="./img/etchasketch.webp" alt="Project Img">
+        </picture>
+        <div class="project__text">
+          <h3>Etch A Sketch</h3>
+        <p>
+          I developed a simple game in JavaScript based on the popular toy called Etch A Sketch.
+        </p>
+        </div>
+        <div class="projects__article--tech">
+          <span class="tech html"></span>
+          <span class="tech css"></span>
+          <span class="tech js"></span>
+        </div>
+        <div class="projects__article--btn">
+          <button href="https://github.com/migurd/etch-a-sketch">Repository</button>
+          <button href="https://migurd.github.io/etch-a-sketch/">Live Demo</button>
+        </div>
+      </article>
+      <!-- ARTICLE 3 -->
+      <!-- <article class="projects__article">
+        <picture class="projects__picture">
+          <img src="./img/fill_img.gif" alt="Project Img">
+        </picture>
+        <div class="project__text">
+          <h3>Project #3</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem consequuntur impedit veritatis facere laudantium voluptas sint illum nihil. Minima nostrum dolores vitae a est iusto facere aliquid veritatis doloremque!
+        </p>
+        </div>
+        
+      </article> -->
+    </div>
   </section>
 
+  <!-- <svg class="second-wave" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,600 C 0,600 0,300 0,300 C 190.2666666666667,352 380.5333333333334,404 521,374 C 661.4666666666666,344 752.1333333333332,231.99999999999997 897,206 C 1041.8666666666668,180.00000000000003 1240.9333333333334,240 1440,300 C 1440,300 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="#1e1f1c" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg> -->
+  <svg class="second-wave" viewBox="0 25 100 15" preserveAspectRatio="none" >
+    <g>
+     <path d="M100,30 Q70,40 50,30 T0,30 v10 h100Z" 
+           style="fill:#1E1F1C; stroke-linejoin:round; stroke:#ffffff" stroke-width="0"/>
+    </g>
+   </svg>
   <!-- ABOUT ME -->
-  <!-- <section class="aboutme">
+  <section id="aboutme">
     <h2>About me</h2>
 
     <section class="aboutme__competence">
       <h3>Competences</h3>
+      <div class="competences">
+        <span class="tech c"></span>
+        <span class="tech cc"></span>
+        <span class="tech cs"></span>
+        <span class="tech dotnet"></span>
+        <span class="tech oracle"></span>
+        <span class="tech html"></span>
+        <span class="tech css"></span>
+        <span class="tech js"></span>
+      </div>
     </section>
 
     <section class="aboutme__hobbies">
       <h3>Hobbies</h3>
+      <div class="hobbies">
+        <span class="tech read"></span>
+        <span class="tech workout"></span>
+        <span class="tech gaming"></span>
+        <span class="tech entertainment"></span>
+      </div>
     </section>
-  </section> -->
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer">

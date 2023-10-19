@@ -15,10 +15,34 @@
 
 body {
   font-family: 'Poppins';
+  min-width: 350px;
 }
 
 h2 {
   line-height: 5rem;
+}
+
+.first-wave {
+  z-index: 1;
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+.second-wave {
+  position: relative;
+  z-index: 1;
+  bottom: -10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
 }
 
 .navbar {
@@ -28,11 +52,13 @@ h2 {
   align-items: center;
   justify-content: space-between;
   min-height: 70px;
+  height: 70px;
   width: 100%;
   background-color: var(--primary-color);
 }
 
 .nav-menu {
+  z-index: 999;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -70,41 +96,69 @@ h2 {
   padding: 30px;
   height: calc(100vh - 70px);
   background-color: var(--secondary-color);
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.829),
-    rgba(0, 0, 0, 0.801)
-  ), url('../img/pfp.jpg');
-  background-position: -300px -225px;
-  background-size: 200%;
+  background-image: url('../img/pfp_blacker.png');
+  background-position: calc(50% - 50px);
+  background-size: 250%;
+  background-repeat: no-repeat;
+  object-fit: contain;
   color: var(--contrast-color);
-  min-width: 400px;
+}
+
+.main-text {
+  max-width: 340px;
 }
 
 .main-text__head {
   font-size: 4.5rem;
-  line-height: 8rem;
+  line-height: 5rem;
 }
 
 .main-text__body {
   line-height: 3rem;
+  margin-bottom: 10px;
+}
+
+.contact {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  gap: 20px;
+}
+.contact a {
+  transition: 0.5s;
+  border-bottom: 2px solid transparent;
+}
+.contact a:hover {
+  padding: 10px;
+  padding: 0px 30px;
+  border-bottom: 2px solid white;
 }
 
 #main img {
   width: 350px;
 }
 
-.projects {
+#projects {
+  position: relative;
+  z-index: 2;
   padding: 20px;
 }
 
 .projects__article {
   margin: 0 auto;
-  background-color:var(--yellow);
-  width: 350px;
-}
-.projects__article {
+  background-color:burlywood;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
+}
+
+.projects__article.gym{
+  background-color: var(--secondary-color);
+  color: white;
+}
+.projects__article.gym .projects__article--tech,
+.projects__article.gym .projects__article--btn {
 }
 
 .projects__picture img {
@@ -117,19 +171,154 @@ h2 {
   padding: 20px;
 }
 
-.projects h3 {
+#projects h3 {
   line-height: 3rem;
 }
-.projects p {
+
+/* PROJECTS CARD */
+.projects__article--tech,
+.projects__article--btn {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+}
+
+.projects__article--btn {
+  justify-content: center;
+  height: 100px;
+  gap: 20px;
+}
+
+.projects__article--btn button {
+  height: 50px;
+  width: 120px;
+  cursor: pointer;
+  background-color: rgb(69, 128, 255);
+  color: rgb(255, 255, 255);
+  border: 1px solid transparent;
+  font-size: 16px;
+  transition: .2s;
+}
+.projects__article--btn button:hover  {
+  background-color: rgb(12, 89, 255);
+}
+
+.projects__article--tech {
+  padding: 0px 20px 20px 20px;
+}
+
+.tech {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.c {
+  background-image: url('../img/logos/C-01.png');
+}
+.cc {
+  background-image: url('../img/logos/C++-01.png');
+}
+.cs {
+  background-image: url('../img/logos/C-Sharp-01.png');
+}
+.dotnet {
+  background-image: url('../img/logos/Microsoft-Dotnet-01.png');
+}
+.oracle {
+  background-image: url('../img/logos/Oracle-01.png');
+}
+.html {
+  background-image: url('../img/logos/HTML-5-logo-vector-01.png');
+}
+.css {
+  background-image: url('../img/logos/CSS-3-01.png');
+}
+.js {
+  background-image: url('../img/logos/JavaScript-01.png');
+}
+
+.github {
+  background-image: url('../img/logos/github.png');
+}
+.linkedin {
+  background-image: url('../img/logos/linkedin.webp');
+}
+
+.read {
+  background-image: url('../img/hobbies/reading.png');
+}
+.workout {
+  background-image: url('../img/hobbies/exercise.png');
+}
+.gaming {
+  background-image: url('../img/hobbies/gaming.png');
+}
+.entertainment {
+  background-image: url('../img/hobbies/entertainmnet.png');
+}
+
+/* ABOUT ME */
+#aboutme {
+  padding: 20px;
+  padding-bottom: 100px;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+h2 {
+  position: relative;
+  z-index: 2;
+  color: rgb(69, 128, 255);
+  line-height: 5rem;
+}
+#aboutme h3 {
+  line-height: 3rem;
+}
+
+.aboutme__competence,
+.aboutme__hobbies {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.competences {
+  min-height: 250px;
+}
+.hobbies {
+  min-height: 150px;
+}
+.competences,
+.hobbies {
+  display: grid;
+  margin-left: 30px;
+  width: 80%;
+  max-width: 300px;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+.competences .tech,
+.hobbies .tech {
+  height: 50px;
+  width: 50px;
 }
 
 .footer {
-  height: 70px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--primary-color);
-  color: var(--yellow);
+  border-top: 1px solid white;
+  color: white
 }
 
 /* NAV */
@@ -160,6 +349,12 @@ h2 {
 }
 
 @media(min-width: 768px) {
+  .first-wave {
+    bottom: -175px;
+  }
+  .second-wave {
+    bottom: -44px;
+  }
   .hamburger {
     display: none;
   }
@@ -172,6 +367,71 @@ h2 {
     gap: 20px;
     background-color: transparent;
     width: auto;
+    transition: none;
+    padding: 0px;
+  }
+
+  .nav-item a {
+    transition: 0.5s;
+    border-bottom: 2px solid transparent;
+  }
+  .nav-item a:hover {
+    padding: 5px;
+    border-bottom: 2px solid white;
+  }
+
+  #main {
+    background-position: -100;
+    background-size: 150%;
+    align-items: start;
+  }
+  .main-text {
+    align-items: left;
+    max-width: 500px;
+  }
+
+  .aboutme__competence,
+  .aboutme__hobbies {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .competences,
+  .hobbies {
+    display: flex;
+    max-width: none;
+    justify-content: start;
+    gap: 20px;
+  }
+
+  .competences .tech,
+  .hobbies .tech {
+    height: 80px;
+    width: 80px;
+  }
+
+  .projects__articles-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  .projects__article {
+    margin: 0;
+  }
+
+}
+
+@media (min-width: 1224px) {
+  .second-wave {
+    bottom: -62px;
+  }
+  #main {
+    background-position: -100;
+    background-size: 100%;
+  }
+  .main-text {
+    max-width: none;
+    margin-left: 100px;
   }
 }
 
